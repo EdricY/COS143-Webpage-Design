@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Lissajous curves</title>
+	<script>
+	window.onresize = function(){ location.reload(); }
+	</script>
+</head>
+
+<body onresize="reset()">
+	<span id = mark style = "position: fixed;">
+	x
+	</span>
+	<script>
+	var t = 0;
+	var w = window.innerWidth;
+	var h = window.innerHeight;
+	var a = Math.floor(Math.random()*10) + 1;
+	var b = Math.floor(Math.random()*10) + 1;
+	function reset(){
+		location.reload();
+	}
+	function tick(){
+		document.getElementById("mark").style.top = (h/2) + (h/2.3)*Math.sin(a*d2r(t))+'px'
+		document.getElementById("mark").style.left = (w/2) + (w/2.3)*Math.sin(b*d2r(t))+'px'
+		t++;
+		if (t >= a*b*360) t = 0;
+		setTimeout(tick, 30);
+		console.log(t,a,b)
+	}
+	function d2r(deg){
+		return (0.0174533*deg)
+	}
+	tick();
+	</script>	
+</body>
+</html>

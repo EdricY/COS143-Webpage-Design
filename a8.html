@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Assignment 8</title>
+	<script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<link rel="stylesheet" type="text/css" href="a8.css">
+	<link href="https://fonts.googleapis.com/css?family=Bungee+Shade" rel="stylesheet">  
+	
+</head>
+<body>
+   <div class="container-fluid">
+   <header><h1>A-web-site-name-of-your-choice-WOW™</h1></header>
+      <div class="row">
+         <div class="col-md-6 col-xs-12">
+            <h2>Account Management</h2>
+            <label for="username1">Username&nbsp;</label><span id="username1Message" class="note"></span><br>
+            <input type="text" id="username1" maxlength="5" oninput='validate("username1");'><br>
+            <label for="password1">Password&nbsp;</label><span id="password1Message" class="note"></span><br>
+            <input type="password" id="password1" maxlength="5" ><br><br>
+            <button type="button" id="create" onclick="createAccount()" class="button"><span>Create</span></button>
+            <button type="button" id="delete" onclick="deleteAccount()" class="button"><span>Delete</span></button>
+            <button type="button" id="change" onclick="changePassword()" class="button"><span>Change&nbsp;Password</span></button>
+            <br><span id="createMessage" class="note"></span><br>
+            <br><br>
+         </div>
+
+         <div class="col-md-6 col-xs-12">
+            <h2>Session</h2>
+            <label for="username2">Username&nbsp;</label><span id="username2Message" class="note"></span><br>
+            <input type="text" id="username2" maxlength="5" oninput='validate("username2");'><br>
+            <label for="password2">Password&nbsp;</label><span id="password2Message" class="note"></span><br>
+            <input type="password" id="password2" maxlength="5"><br><br>
+            <button type="button" id="login" onclick="login()" class="button"><span>Login</span></button>
+            <button type="button" id="logout" onclick="logout()" class="button"><span>Logout</span></button>
+            <br><span id="sessionMessage" class="note">Not Logged in.</span><br>
+         </div>
+      </div>
+   </div>
+   <script src="a8.js"></script>
+<br><br>
+<footer><em>by Edric Yu and Josh Clement</em></footer>
+</body>
+</html>
+

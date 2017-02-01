@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>AJAX Example</title>
+</head>
+
+<body>
+<input type="text" id="firstName"><br>
+<input type="text" id="lastName">
+Response: <span id="response"></span>
+
+<script>
+
+function responseReceivedHandler(){
+	response.innerHTML = this.responseText;
+	//console.log("response: " + this.responseText)
+}
+function startAjax(){
+	var xhr = new XMLHttpRequest();
+	var params = "fname="+firstName.value+"&lname="+lastName.value;
+	xhr.addEventListener("load", responseReceivedHandler);
+	xhr.open("POST", "//cse.taylor.edu/~sbrandle/echoForm.php")
+	xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+	xhr.send(params);
+}
+startAjax();
+
+</script>
+</body>
+</html>

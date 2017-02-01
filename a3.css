@@ -1,0 +1,23 @@
+#imgWhole {
+	width: 460px;
+}
+#imgHalf{
+	width: 230px;
+	float: right;
+}
+#city{
+	height: 600px;
+}
+#animal{
+	width: 700px;
+}
+a:hover{
+	color: #0F0;
+}
+a{
+	color: #F00;
+}
+h1{
+	color: #066;
+	font-family: "Lucida Console"
+}

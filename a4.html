@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Assignment 4</title>
+	<!--<link rel="stylesheet" type="text/css" href="a4.css">-->
+</head>
+<body>
+<script src="a4.js" defer></script>
+<h1>Mysterious Form</h1>
+<form method="GET" action="//cse.taylor.edu/~cos143/echoForm.php" onsubmit="return formOk();" id="myForm" oninput="findProduct()">
+	<label for="text1"><code>root@john:/#</code></label><br>
+	<textarea id="text1" rows="3" cols="50" name="text1"></textarea><br>
+	<label for="pw">Super Secure Ultra Encrypted Password™</label>
+	<input type="password" name="password" id="pw"><br>
+	<label for="roomNum">Room Number</label>
+	<select name="roomNum" id="roomNum">
+		<optgroup label="CSE">
+			<option value="EUL200">EUL200</option>
+			<option value="EUL201">EUL201</option>
+			<option value="EUL218">EUL218</option>
+		</optgroup>
+		<optgroup label="MAT">
+			<option value="EUL118">EUL118</option>
+			<option value="EUL103">EUL103</option>
+		</optgroup>
+	</select><br>
+	<input type="text" id="num1" placeholder="Enter a Number"> * 
+	<input type="text" id="num2" placeholder="Enter a Number"> = 
+	<output id="product" for="num1 num2"></output><br>
+	<input type="submit" value="Submit">
+</form>
+<script>
+/*This is to fix the way Firefox adds another line while no one else does... with help from stackoverflow
+http://stackoverflow.com/questions/9847580/how-to-detect-safari-chrome-ie-firefox-and-opera-browser */
+var isFirefox = typeof InstallTrigger !== 'undefined';
+if (isFirefox) document.getElementById("text1").rows="2";
+</script>
+</body>
+</html>

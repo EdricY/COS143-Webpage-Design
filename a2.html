@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Assignment 2</title>
+
+</head>
+<body style = "background-color:#9BF;">
+<p id = "hello"></p>
+Remember for <s>Arithmetic</s> Geometric Sequences: a<sub>n</sub> = a<sub>1</sub> * r<sup>n-1</sup>
+<p>
+Once in a while, if you are feeling blue,<br>
+When troubles seem to keep coming along,<br>
+If you will take the time to listen to music<br>
+It can lift your spirits on the wings of a song.
+</p>
+<!-- https://developer.mozilla.org/en-US/docs/Web/CSS/mix-blend-mode for transparency -->
+<img src="http://cdn.playbuzz.com/cdn/6dee7ace-e665-44b1-883d-4e9be85b74a9/c010076c-94a9-4e48-a038-db4eb7cf50d0.jpg" alt="music" style = "mix-blend-mode: multiply;">
+
+<script>
+var name = prompt("What is your name?");
+if (!name || name == "null") name = "Anonymous"
+console.log("name:", name, typeof name);
+var p = document.getElementById("hello");
+p.innerHTML = "Hello, " + name + "!";
+</script>
+
+</body>
+</html>

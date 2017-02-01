@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>color test</title>
+</head>
+
+<body>
+	<span id = "b" style="position: absolute;">
+	<button type="button" onclick = "swap()" tabindex="-1">Switch!</button>
+	</span>
+	<script>
+	var w = window.innerWidth;
+	var h = window.innerHeight;
+	var i = 0;
+	strobe = false;
+	function swap(){
+		strobe =! strobe
+		breathe();
+		tick();
+	}
+	function breathe(){
+		document.getElementById("b").style.top = h/2 + "px";
+		document.getElementById("b").style.left = w/2 + "px";
+		document.getElementsByTagName("body")[0].style.backgroundColor='hsl('+i+',100%,50%)';
+		i++;
+		if (i > 360){ i = 0;}
+		if (!(strobe)){
+			setTimeout(breathe, 50);
+			}
+	}
+	function tick(){
+		document.getElementById("b").style.top = Math.floor(Math.random()*(h-document.getElementById("b").style.height)) + "px";
+		document.getElementById("b").style.left = Math.floor(Math.random()*(w-20-document.getElementById("b").style.width)) + "px";		
+		document.getElementsByTagName("body")[0].style.backgroundColor='hsl('+i+',100%,50%)';
+		i++;
+		if (i > 360) i = 0;
+		if (strobe) setTimeout(tock, 50);
+	}
+	function tock(){
+			document.getElementsByTagName("body")[0].style.backgroundColor='#000';
+			
+			if(strobe);
+				setTimeout(tick, 50);
+	}
+	if(!confirm("I am not prone to seizures and wish to continue."))
+	window.location.href = "index.html";
+	
+	breathe();
+
+	</script>	
+</body>
+</html>

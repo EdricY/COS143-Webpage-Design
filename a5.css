@@ -1,0 +1,40 @@
+body{
+	font-family: 'Reem Kufi', sans-serif;
+}
+h1{
+	color: rgb(0,25,70);
+	text-shadow: 3px 2px .5px #0000A8;
+}
+img#cat{
+	width:200px;
+	right:0;
+	position:fixed;
+}
+div.colPar{
+	font-family: 'Reem Kufi', sans-serif;
+	color: #318;
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+	
+    -webkit-column-rule-width: 1px;
+    -moz-column-rule-width: 1px;
+    column-rule-width: 1px;
+	
+	font-size: 1.5em;
+}
+@keyframes spin {
+    from {transform:rotate(0deg);}
+    to {transform:rotate(360deg);}
+}
+div#spinning {
+	display:inline-block;
+    animation-name: spin;
+    animation-duration: 3s;
+	animation-delay:0s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+button#spinning {
+	float:center;
+}

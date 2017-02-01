@@ -1,0 +1,124 @@
+body {
+	background: blue; /* For browsers that do not support gradients */
+	background: -webkit-linear-gradient(right, CornflowerBlue, RoyalBlue); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(right, CornflowerBlue, RoyalBlue); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(right, CornflowerBlue, RoyalBlue); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(right, CornflowerBlue, RoyalBlue); /* Standard syntax */
+	margin-left: 2%;   
+}
+
+h1 {
+	/*margin-bottom: -15px;*/
+	/*margin-top: -15px;*/
+	font-family: 'Bungee Shade', sans-serif;
+	font-size: 34pt;
+	color: white;
+	text-shadow: 2px 2px 2px black;
+}
+
+h2 {
+	font-family: 'Bungee Shade', sans-serif;
+	font-size: 30pt;
+	color: white;
+	text-shadow: 2px 2px 2px black;
+}
+
+label {
+	color: white;
+	font-family: "Raleway", sans-serif;
+	font-size: 18pt;
+   margin-bottom: -15px;
+}
+
+input {
+	width: 70%;
+   max-width: 620px;
+	min-width: 300px;
+	height: 17pt;
+	border: 3px inset black;
+	border-radius: 5px;
+}
+
+input.valid{
+	border: 3px inset #0F0;
+	background-color: #DFD;
+}
+input.invalid{
+	border: 3px inset #F00;
+	background-color: #FDD;
+}
+
+input:focus {
+	background-color: #DDD;
+}
+
+.button {
+	display: inline-block;
+	border-radius: 4px;
+	background: -moz-linear-gradient(left, DimGrey, DarkGrey); /* For Firefox 3.6 to 15 */
+	background: -webkit-linear-gradient(left, DimGrey, DarkGrey);
+	background: -o-linear-gradient(left, DimGrey, DarkGrey);
+	background: linear-gradient(left, DimGrey, DarkGrey); /* Standard syntax */
+	border: 3px outset black;
+	color: #FFFFFF;
+	text-align: center;
+	font-size: 28px;
+	padding: 20px;
+	width: 300px;
+	transition: all 0.5s;
+	margin: 5px;
+
+}
+
+.button:enabled {
+	cursor: pointer;
+}
+
+.button:enabled span {
+	cursor: pointer;
+	display: inline-block;
+	position: relative;
+	transition: 0.4s;
+}
+
+.button:enabled span:after {
+	content: '\00bb';
+	position: absolute;
+	opacity: 0;
+	top: 0;
+	right: -20px;
+	transition: 0.5s;
+}
+
+.button:hover:enabled span {
+	padding-right: 25px;
+}
+
+.button:hover:enabled span:after {
+	opacity: 1;
+	right: 0;
+}
+
+.button:disabled {
+	transition: 0s;
+	background: -moz-linear-gradient(left, #555, #777); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(left, #555, #777); /* Standard syntax */
+	background: -webkit-linear-gradient(left, #555, #777);
+	background: -o-linear-gradient(left, #555, #777);
+	color: #444;
+	border: 3px inset black;
+}
+.button#delete{
+	display: none;
+}
+.button#change{
+	display: none;
+}
+.button#logout{
+	display: none;
+}
+.note{
+	display: inline;
+	font-family: serif;
+	color: #CCC;
+}

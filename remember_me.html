@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Remember Me</title>
+	<style>
+	img#subject{
+		height:300px;
+	}
+	input#name{
+		width: 100%;
+		padding: 5px;
+		margin:1px;
+		border: 1px solid #777;
+		border-radius: 3px;
+		box-sizing: border-box;
+	}
+	div#content{
+		background-color:blue;
+		padding:10px;
+		margin:0px auto;
+	}
+	div#input{
+		width:30%;
+		background-color:red;
+		margin:0 auto;
+	}
+	</style>
+	
+</head>
+<body>
+	<div id="content">
+	<img id="subject" src="./images/300.png" alt="student" onload="resizeContentDiv()">
+	</div>
+	<br>
+	<div id="input">
+		<input type="text" id="name" autofocus>
+	</div>
+</body>
+<script>
+	function resizeContentDiv(){
+		var img = document.getElementById("subject");
+		var size = img.width + "px";
+		//console.log(size);
+		document.getElementById("content").style.width = size;
+	}
+	function guess(){
+		document.getElementById("name").value
+		
+		document.getElementById("name").value="";
+		document.getElementById("subject").src = "./images/fff.png";
+	}
+	document.getElementById("name").addEventListener("keyup", function(event) {
+		event.preventDefault();
+		if (event.keyCode == 13) guess();});
+	function getImageNameMap(){
+		return {
+			
+		}
+	}
+</script>
+
+</html>

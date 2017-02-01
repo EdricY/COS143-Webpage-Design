@@ -1,0 +1,34 @@
+ul{
+	/*position:fixed;*/
+	width:100%;
+	align:center;
+	list-style-type:none;
+	padding:10px 0;
+	margin:0 auto;
+}
+li{
+	display: inline;
+}
+.banner{
+	float:left;
+	width: 14.1%;
+	background-color: #07f;
+	color: white;
+	padding: 15px;
+	margin: 10px 0;
+	border: 1px solid #BBB;
+	border-radius: 3px;
+	cursor: pointer;
+}
+.banner:hover{
+	background-color: #04b;
+}
+#container{
+	margin:15px;
+}
+h2.class1{
+	font-family:serif;
+}
+h2.class2{
+	font-family:sans-serif;
+}
